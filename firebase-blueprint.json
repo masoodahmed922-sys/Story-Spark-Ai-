@@ -1,0 +1,128 @@
+{
+  "entities": {
+    "Book": {
+      "title": "Book",
+      "description": "Storybook created in StorySpark containing chapters, illustrations, and characters",
+      "type": "object",
+      "properties": {
+        "bookId": {
+          "type": "string",
+          "description": "Unique book identifier"
+        },
+        "id": {
+          "type": "number",
+          "description": "Local numeric ID of the book"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the storybook"
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Subtitle of the storybook"
+        },
+        "description": {
+          "type": "string",
+          "description": "Brief description"
+        },
+        "authorName": {
+          "type": "string",
+          "description": "Author name"
+        },
+        "authorBio": {
+          "type": "string",
+          "description": "Author biography"
+        },
+        "coverImageRes": {
+          "type": "string",
+          "description": "Cover illustration image path or resource"
+        },
+        "coverStyle": {
+          "type": "string",
+          "description": "Style of the cover"
+        },
+        "titlePosition": {
+          "type": "string",
+          "description": "Cover title position"
+        },
+        "targetAge": {
+          "type": "string",
+          "description": "Target age group"
+        },
+        "storyType": {
+          "type": "string",
+          "description": "Category or type of story"
+        },
+        "storyTone": {
+          "type": "string",
+          "description": "Tone of the narrative"
+        },
+        "readingLevel": {
+          "type": "string",
+          "description": "Reading complexity"
+        },
+        "artStyle": {
+          "type": "string",
+          "description": "Illustration visual art style"
+        },
+        "pageLayout": {
+          "type": "string",
+          "description": "Layout mode"
+        },
+        "moralLesson": {
+          "type": "string",
+          "description": "Core moral lesson"
+        },
+        "storyDnaJson": {
+          "type": "string",
+          "description": "Creative DNA json"
+        },
+        "createdAt": {
+          "type": "number",
+          "description": "Creation timestamp"
+        },
+        "pageCount": {
+          "type": "number",
+          "description": "Number of pages"
+        },
+        "isFavorite": {
+          "type": "boolean",
+          "description": "Favorite flag"
+        },
+        "language": {
+          "type": "string",
+          "description": "Book primary language code"
+        },
+        "translationsJson": {
+          "type": "string",
+          "description": "Serialized translations metadata"
+        },
+        "userId": {
+          "type": "string",
+          "description": "Owner user ID"
+        },
+        "pages": {
+          "type": "array",
+          "description": "List of story pages"
+        },
+        "characters": {
+          "type": "array",
+          "description": "List of story characters"
+        },
+        "updatedAt": {
+          "type": "number",
+          "description": "Last updated timestamp"
+        }
+      },
+      "required": ["title", "userId"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/books/{bookId}": {
+      "schema": {
+        "$ref": "#/entities/Book"
+      },
+      "description": "User personal storybooks library"
+    }
+  }
+}

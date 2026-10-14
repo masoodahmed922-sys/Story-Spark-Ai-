@@ -1,0 +1,37 @@
+# Gradle & Build Caches
+*.iml
+.gradle/
+.kotlin/
+/build/
+app/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+
+# Android Studio & IDE
+/.idea/
+.DS_Store
+
+# Local Configuration & SDK
+local.properties
+/local.properties
+
+# Secrets, Environment Files & Keys (CRITICAL: Never commit to version control)
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+debug.keystore
+debug.keystore.base64
+my-upload-key.jks
+*.p12
+*.pem
+*.key
+
+# Service Account Credentials & Backend Secrets
+service-account*.json
+firebase-adminsdk*.json
+credentials.json
+client_secret*.json
+google-services-private.json
